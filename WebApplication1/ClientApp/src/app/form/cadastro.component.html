@@ -1,0 +1,26 @@
+<h4 class="text-center" > Registrar Novo Usuário</h4>
+
+<form [formGroup] ="cadastroForm" (submit)="cadastrar()" class="form mt-4">
+  
+  <div class="form-group">
+    <input formControlName="nome" type="text" class="form-control" placeholder="nome">
+  </div>
+
+  <div class="form-group">
+    <input formControlName="data" type="date" class="form-control" placeholder="Data">
+  </div>
+
+  <div class="form-group">
+    <input formControlName="email" type="email" class="form-control" placeholder="E-mail">
+  </div>
+
+  <div class="form-group">
+    <input formControlName="user" type="text" class="form-control" placeholder="Usuario">
+  </div>
+
+  <div class="form-group">
+    <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Enviar</button>
+</form>
