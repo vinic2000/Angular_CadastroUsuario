@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TabelaListComponent } from "./TabelaListComponent";
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FiltrarPorNome } from './filtrarPorNome.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TabelaListComponent } from './tabela-list.component';
+import { FormModule } from '../form/form.module';
+import { FormEditarComponent } from '../form/form-editar/form-editar.component';
 
 @NgModule({
     declarations: 
         [
             TabelaListComponent,
-            FiltrarPorNome
+            FiltrarPorNome            
         ],
     imports: [ 
-        CommonModule 
+        CommonModule,
+        FormsModule, 
+        ReactiveFormsModule,
+        FormModule,
      ],
     exports: [TabelaListComponent]
 })

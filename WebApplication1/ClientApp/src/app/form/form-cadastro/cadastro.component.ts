@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Usuario } from '../tabela-list/usuario';
-import { AuthService } from '../auth/auth.service';
+import { Usuario } from '../../tabela-list/usuario';
+import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CadastroComponent implements OnInit {
 
-    @Input() cadastroForm:FormGroup;
+  cadastroForm:FormGroup;
 
   constructor(
     private formBuild: FormBuilder,
@@ -22,11 +22,21 @@ export class CadastroComponent implements OnInit {
 
         this.cadastroForm = this.formBuild.group({
 
-            nome:['',Validators.required],
-            data: ['',Validators.required],
-            email: ['',Validators.required],
-            user: ['',Validators.required],
-            senha: ['',Validators.required]
+            nome:['',
+              Validators.required
+            ],
+            data: ['',
+              Validators.required
+            ],
+            email: ['',
+              Validators.required
+            ],
+            user: ['',
+              Validators.required
+            ],
+            senha: ['',
+              Validators.required
+            ]
         });
      }
 

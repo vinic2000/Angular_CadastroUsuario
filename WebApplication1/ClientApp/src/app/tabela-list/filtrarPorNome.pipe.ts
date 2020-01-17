@@ -4,13 +4,13 @@ import { Usuario } from "./usuario";
 @Pipe({ name: 'filtrarPorNome' })
 
 export class FiltrarPorNome implements PipeTransform {
+  teste: string = "";
 
   transform(usuarios: Usuario[], dados: string) {
 
-    //dados = dados.trim();
-
     if (dados) {
-      return usuarios.filter(usuario => usuario.nome.toLowerCase().includes(dados));
+      return usuarios.filter(usuario =>
+        usuario.nome.toLowerCase().includes(dados));
     }
     else {
       return usuarios;
